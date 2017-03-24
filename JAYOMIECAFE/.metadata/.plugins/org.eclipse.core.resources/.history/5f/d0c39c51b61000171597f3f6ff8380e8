@@ -1,0 +1,17 @@
+package control;
+
+public class TempButton{
+	private String title;
+
+	public TempButton(){
+	this.getClass();
+	}
+	
+	public TempButton(String temp){
+		super(temp);
+		this.title = temp;
+		this.toString();
+	}
+	
+	
+}

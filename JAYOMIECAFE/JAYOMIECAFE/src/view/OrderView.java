@@ -53,6 +53,7 @@ public class OrderView extends JPanel{
 		public void actionPerformed(ActionEvent e){
 			win.change("Drink");
 			if(e.getSource()==Button2){
+				//Button2.getTitle();
 				OrderList.add(Button2, getName());
 			}
 		}

@@ -1,0 +1,7 @@
+package control;
+
+public class TempButton{
+	private String title;
+	
+	public TempButton(){
+}
