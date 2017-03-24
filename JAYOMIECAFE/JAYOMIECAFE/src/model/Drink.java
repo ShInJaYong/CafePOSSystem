@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import view.MainFrame;
+
 public class Drink extends JPanel{
 	private MainFrame win;
 	private JButton jButton;

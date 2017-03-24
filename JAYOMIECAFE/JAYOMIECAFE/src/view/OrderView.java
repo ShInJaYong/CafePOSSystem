@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-class OrderView extends JPanel{
+public class OrderView extends JPanel{
 	
 	private JButton Button1;
 	private JButton Button2;

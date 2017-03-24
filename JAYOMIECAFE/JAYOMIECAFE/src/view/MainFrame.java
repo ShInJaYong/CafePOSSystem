@@ -1,8 +1,9 @@
 package view;
 
-import java.awt.Component;
-
 import javax.swing.JFrame;
+
+import model.Coffee;
+import model.Drink;
 
 public class MainFrame extends JFrame{
 	
