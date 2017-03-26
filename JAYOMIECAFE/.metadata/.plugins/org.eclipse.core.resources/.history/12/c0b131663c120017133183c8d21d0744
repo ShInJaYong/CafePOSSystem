@@ -48,6 +48,7 @@ public class OrderView extends JPanel{
 		OrderList = new JList();
 		OrderList.setSize(300,600);
 		OrderList.setLocation(700, 10);
+		OrderList.bounds();
 		add(OrderList);
 		
 		/*주문금액 확인*/

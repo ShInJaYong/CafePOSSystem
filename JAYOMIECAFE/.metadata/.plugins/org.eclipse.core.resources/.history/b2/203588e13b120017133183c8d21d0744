@@ -61,8 +61,7 @@ public class OrderView extends JPanel{
 		
 		Button4 = new JButton("현금결제");
 		Button4.setSize(150,70);
-		Button4.setLocation(870, 700);
-		add(Button4);
+		Button4.setLocation(900, 700);
 		
 		
 		

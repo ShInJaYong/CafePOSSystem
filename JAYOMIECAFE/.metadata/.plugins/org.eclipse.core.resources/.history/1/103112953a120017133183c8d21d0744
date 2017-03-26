@@ -13,6 +13,7 @@ public class Coffee extends JPanel{
 	private JButton jButton;
 	private JButton jButton1;
 	
+	private int price=0;
 	
 	public Coffee(MainFrame win){
 		setLayout(null);
@@ -23,7 +24,6 @@ public class Coffee extends JPanel{
 		jButton.setSize(100,30);
 		jButton.setLocation(10,10);
 		add(jButton);
-		jButton.setName("2500");
 		
 		/*돌아가기 버튼*/
 		JButton jButton1 = new JButton("메뉴화면으로");

@@ -17,8 +17,6 @@ public class OrderView extends JPanel{
 	private JTextArea TextArea;
 	private MainFrame win;
 	private JList OrderList;
-	private JButton Button3;
-	private JButton Button4;
 	
 	private String[] DrinkName = {"Drink"};
 	private String[] CoffeeName = {"Coffee"};
@@ -54,15 +52,6 @@ public class OrderView extends JPanel{
 		
 		
 		/*결제방식 선택*/
-		Button3 = new JButton("카드결제");
-		Button3.setSize(150,70);
-		Button3.setLocation(700, 700);
-		add(Button3);
-		
-		Button4 = new JButton("현금결제");
-		Button4.setSize(150,70);
-		Button4.setLocation(870, 700);
-		add(Button4);
 		
 		
 		

@@ -17,8 +17,6 @@ public class OrderView extends JPanel{
 	private JTextArea TextArea;
 	private MainFrame win;
 	private JList OrderList;
-	private JButton Button3;
-	private JButton Button4;
 	
 	private String[] DrinkName = {"Drink"};
 	private String[] CoffeeName = {"Coffee"};
@@ -50,25 +48,11 @@ public class OrderView extends JPanel{
 		OrderList.setLocation(700, 10);
 		add(OrderList);
 		
-		/*주문금액 확인*/
-		
-		
-		/*결제방식 선택*/
-		Button3 = new JButton("카드결제");
-		Button3.setSize(150,70);
-		Button3.setLocation(700, 700);
-		add(Button3);
-		
-		Button4 = new JButton("현금결제");
-		Button4.setSize(150,70);
-		Button4.setLocation(870, 700);
-		add(Button4);
-		
 		
 		
 	}
 	
-	// JButton Actionlistener 생성 및 버튼 이벤트 생성시 JList에 String추가
+	// JButton Actionlistener 생성 및 버튼 이벤트 생성
 	class DrinkActionListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			JButton b = (JButton) e.getSource();
@@ -82,12 +66,12 @@ public class OrderView extends JPanel{
 		}
 	}
 	
-	//JButton Actionlistener 생성 및 버튼 이벤트 생성시 JList에 String추가
+	
 	class CoffeeActionListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			JButton b = (JButton) e.getSource();
 			
-			//배열로 메뉴값을 넣을수 있다면 if else순서를 change뒤로 넘겨 detail한 메뉴를 JList에 추가할수 있다.
+			//배열로 메뉴값을 넣을수 있다면 if else순서를 change뒤로 넘겨 detail한 메뉴를 ㅓㅣist에 추가할수 있다.
 			if(b.getText().equals("Coffee")){
 				OrderList.setListData(CoffeeName);
 			} else
