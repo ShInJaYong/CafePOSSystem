@@ -1,0 +1,20 @@
+package model;
+
+public class Coffee extends MainFrame{
+
+	private String name;
+	private int price;
+	private MainFrame win;
+	
+	public Coffee(String name, int price) {
+		this.name = name;
+		this.price = price;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getPrice() {
+		return price;
+	}
+}
+

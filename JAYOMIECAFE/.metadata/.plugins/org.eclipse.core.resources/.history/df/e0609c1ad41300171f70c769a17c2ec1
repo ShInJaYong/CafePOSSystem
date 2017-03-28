@@ -1,0 +1,16 @@
+package model;
+;
+
+import view.MainFrame;
+
+public class Drink {
+	private MainFrame win;
+
+
+	
+	public Drink(MainFrame win){
+		this.win = win;
+	}
+	
+
+}

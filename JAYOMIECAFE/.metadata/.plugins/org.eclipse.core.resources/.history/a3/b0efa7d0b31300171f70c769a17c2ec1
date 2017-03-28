@@ -1,0 +1,35 @@
+package control;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+
+import view.OrderView;
+
+public class CoffeeController {
+	private ArrayList list = new ArrayList();
+
+	public ArrayList getList() {
+		return list;
+	}
+
+	public void setList(ArrayList list) {
+		this.list = list;
+	}
+}
+
+//JButton Actionlistener 생성 및 버튼 이벤트 생성시 JList에 String추가
+class CoffeeActionListener extends OrderView implements ActionListener{
+	public void actionPerformed(ActionEvent e){
+		JButton b = (JButton) e.getSource();
+		
+		//배열로 메뉴값을 넣을수 있다면 if else순서를 change뒤로 넘겨 detail한 메뉴를 JList에 추가할수 있다.
+		if(b.getText().equals("Coffee")){
+			OrderList.setListData(CoffeeName);
+		} else
+			b.setText("Coffee");
+		win.change("Coffee");
+	}
+}

@@ -1,0 +1,33 @@
+package view;
+
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+import control.ReadCoffeeInfo;
+import model.Coffee;
+
+public class MenuDetailPanel extends JPanel{
+	
+	public MenuDetailPanel(){
+		ReadCoffeeInfo.readFile();
+		setLayout(null);
+		ArrayList<Coffee> coffees = ReadCoffeeInfo.getCoffees();
+		System.out.println(coffees.size());
+		for(int i = 0; i < coffees.size(); i++){
+			System.out.println(coffees.get(i).getName());
+			JButton temp = new JButton(coffees.get(i).getName());
+			temp.setSize(100,30);
+			temp.setLocation(10,10+(35*i));
+			this.add(temp);
+		}
+		
+		JButton exitButton = new JButton("뒤로가기");
+		exitButton.setSize(150, 200);
+		exitButton.setLocation(10, 600);
+		add(exitButton);
+		
+	}
+
+}

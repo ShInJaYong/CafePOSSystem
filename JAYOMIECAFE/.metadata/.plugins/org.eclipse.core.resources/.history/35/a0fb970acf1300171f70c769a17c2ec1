@@ -1,0 +1,29 @@
+package model;
+
+import view.MainFrame;
+
+public class Coffee extends MainFrame{
+
+	private String name;
+	private int price;
+	private MainFrame win;
+	
+	public Coffee(String name, int price) {
+		this.name = name;
+		this.price = price;
+	}
+	
+	public MainFrame getWin() {
+		return win;
+	}
+	public void setWin(MainFrame win) {
+		this.win = win;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getPrice() {
+		return price;
+	}
+}
+

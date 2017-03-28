@@ -1,0 +1,34 @@
+package control;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+	
+
+public class ReadCoffeeInformation{
+
+	List CoffeeName = new ArrayList();
+	List CoffeePrice = new ArrayList();
+	
+	try{
+		BufferedReader in = new BufferedReader(new FileReader("CoffeeMenu.txt"));
+	    String s;
+		
+		while ((s=in.readLine()) != null){
+			String[] split = s.split("\t");
+			CoffeeName.add(split[0]);
+			CoffeePrice.add(Integer.valueOf(split[1]));	
+		}
+	in.close();
+	} catch(IOException e){
+		System.err.println(e);
+		System.exit(1);
+		}
+	}
+}
+
+
+

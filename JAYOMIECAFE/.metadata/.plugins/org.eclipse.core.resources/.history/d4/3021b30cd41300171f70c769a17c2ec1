@@ -1,0 +1,22 @@
+package model;
+;
+
+import view.MainFrame;
+
+public class Drink extends JPanel{
+	private MainFrame win;
+
+
+	
+	public Drink(MainFrame win){
+		setLayout(null);
+		this.win = win;
+	}
+	
+	class MyActionListener implements ActionListener{
+		@Override
+		public void actionPerformed(ActionEvent e){
+			win.change("OrderView");
+		}
+	}
+}

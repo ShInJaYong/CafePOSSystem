@@ -1,0 +1,38 @@
+package control;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
+import model.Coffee_;
+
+public class ReadCoffeeInfo {
+	
+	static ArrayList<Coffee_> Coffees = new ArrayList<Coffee_>();
+	
+	static public void readFile(){
+		try
+		{
+			BufferedReader in = new BufferedReader(new FileReader("CoffeeMenu.txt"));
+			String s;
+
+			while ((s = in.readLine()) != null) {
+				String[] split = s.split("\t");
+				Coffee_ tempCoffee = new Coffee_(split[0], Integer.valueOf(split[1]));
+				Coffees.add(tempCoffee);
+			}
+			in.close();
+		}catch(IOException e)
+		{
+			System.err.println(e);
+			System.exit(1);
+		}
+		for(Coffee_ coffee:Coffees){
+			System.out.println("name : " + coffee.getName() + "|||| price: ");
+		}
+	}
+	
+}

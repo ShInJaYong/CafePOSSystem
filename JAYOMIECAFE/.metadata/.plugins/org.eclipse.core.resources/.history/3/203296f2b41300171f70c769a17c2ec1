@@ -1,0 +1,21 @@
+package control;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CoffeeController {
+	List CoffeeList = new ArrayList();
+	
+	if(args.length ==0){
+		System.err.println("Input Filename...");
+		System.exit(1);
+	}
+	
+	try{
+		BufferReader in = new BufferReader(new FileRader(args[0]));
+	}
+	
+	
+}
+
+

@@ -1,0 +1,36 @@
+package control;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Coffee;
+
+public class CoffeeController {
+	
+	
+	if(args.length ==0){
+		System.err.println("Input Filename...");
+		System.exit(1);
+	}
+	
+	try{
+		BufferedReader in = new BufferedReader(new FileReader("CoffeeMenu.txt"));
+	     String s;
+		String s;
+		
+		while ((s = in.read.line()) != null){
+			System.out.println(s);
+		}
+		in.close();
+	} catch(IOException e){
+		System.out.println(e);
+		System.exit(1);
+	}
+	
+	
+}
+
+

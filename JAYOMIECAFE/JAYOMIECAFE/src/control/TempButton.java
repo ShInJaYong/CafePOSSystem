@@ -1,6 +1,9 @@
 package control;
 
-public class TempButton{
+import javax.swing.JButton;
+
+/*SetButtonTitle*/
+public class TempButton extends JButton{
 	private String title;
 
 	public TempButton(){

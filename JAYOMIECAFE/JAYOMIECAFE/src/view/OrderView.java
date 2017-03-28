@@ -20,6 +20,7 @@ public class OrderView extends JPanel{
 	private JButton Button3;
 	private JButton Button4;
 	
+	//JList에 스트링으로 추가하기 위한 변수
 	private String[] DrinkName = {"Drink"};
 	private String[] CoffeeName = {"Coffee"};
 	
@@ -71,20 +72,21 @@ public class OrderView extends JPanel{
 	// JButton Actionlistener 생성 및 버튼 이벤트 생성시 JList에 String추가
 	class DrinkActionListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
+			MainFrame mainframe = new MainFrame();
 			JButton b = (JButton) e.getSource();
 			
 			if(b.getText().equals("Drink")){
-				OrderList.setListData(DrinkName);
-				
+				OrderList.setListData(DrinkName);	
 			} else
 				b.setText("Drink");
-			win.change("Drink");
+			mainframe.change("Drink");
 		}
 	}
 	
 	//JButton Actionlistener 생성 및 버튼 이벤트 생성시 JList에 String추가
 	class CoffeeActionListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
+			MainFrame mainframe = new MainFrame();
 			JButton b = (JButton) e.getSource();
 			
 			//배열로 메뉴값을 넣을수 있다면 if else순서를 change뒤로 넘겨 detail한 메뉴를 JList에 추가할수 있다.
@@ -92,7 +94,7 @@ public class OrderView extends JPanel{
 				OrderList.setListData(CoffeeName);
 			} else
 				b.setText("Coffee");
-			win.change("Coffee");
+			mainframe.change("Coffee");
 		}
 	}
 	

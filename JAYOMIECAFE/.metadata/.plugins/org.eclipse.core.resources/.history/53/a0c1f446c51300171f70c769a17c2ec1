@@ -1,0 +1,56 @@
+package view;
+
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import model.Coffee;
+import model.Drink;
+
+public class MainFrame extends JFrame{
+	
+	public OrderView orderview = null;
+	public Coffee coffee = null;
+	public Drink drink = null;
+	
+	private ArrayList<JPanel> panelStack = new ArrayList<JPanel>();
+	
+	public MainFrame(){
+		this.pushPanel(orderview);
+	}
+	
+	public void pushPanel(JPanel panel){
+		this.panelStack.add(panel);
+		this.getContentPane().removeAll();
+		getContentPane().add(panel);
+		revalidate();
+		repaint();
+	}
+	
+	public void popPanel(){
+		this.panelStack.remove(panelStack.size()-1);
+	}
+	
+	public void change(String panelName){
+		
+		if(panelName.equals("Coffee")){
+			getContentPane().removeAll();
+			getContentPane().add(coffee);
+			revalidate();
+			repaint();
+		} else if(panelName.equals("Drink")){
+			getContentPane().removeAll();
+			getContentPane().add(drink);
+			revalidate();
+			repaint();
+		} else{
+			getContentPane().removeAll();
+			getContentPane().add(orderview);
+			revalidate();
+			repaint();
+
+		}
+	}
+
+}

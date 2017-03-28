@@ -1,0 +1,22 @@
+package model;
+;
+
+import view.MainFrame;
+
+public class Drink {
+	private MainFrame win;
+	private String name;
+	private int price;
+	
+	public Drink(String name, int price){
+		
+	}
+
+
+	
+	public Drink(MainFrame win){
+		this.win = win;
+	}
+	
+
+}
