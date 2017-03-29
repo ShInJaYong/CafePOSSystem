@@ -11,13 +11,13 @@ import model.Drink;
 
 public class MenuDetailPanel extends JPanel {
 
-	public MenuDetailPanel(){
+	public MenuDetailPanel(String panelName){
 		ReadCoffeeInfo.readFile();
 		setLayout(null);
 		ArrayList<Coffee> coffees = ReadCoffeeInfo.getCoffees();
 		ArrayList<Drink> drinks = ReadCoffeeInfo.getDrinks();
 		
-		if(ReadCoffeeInfo.key.equals("C")){
+		if(panelName.equals("Coffee")){
 			for(int i = 0; i < coffees.size(); i++){
 				System.out.println(coffees.get(i).getName());
 				JButton temp = new JButton(coffees.get(i).getName());
@@ -32,7 +32,7 @@ public class MenuDetailPanel extends JPanel {
 				temp.setSize(100,30);
 				temp.setLocation(10,10+(35*i));
 				this.add(temp);
-				}
+			}
 		}
 		
 		JButton exitButton = new JButton("³ª°¡±â");

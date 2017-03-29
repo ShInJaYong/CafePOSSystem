@@ -12,11 +12,7 @@ public class Main {
 
 		MainFrame win = new MainFrame();
 		
-		win.setTitle("ÀÚ¿ä¹ÌCAFE");
 		
-		win.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		win.setSize(1100,1000);
-		win.setVisible(true);
 		
 		
 	

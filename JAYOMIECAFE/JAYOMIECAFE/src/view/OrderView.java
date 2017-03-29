@@ -11,7 +11,7 @@ import javax.swing.JTextArea;
 
 public class OrderView extends JPanel{
 	
-	private JButton Button1;
+	private JButton button1;
 	private JButton Button2;
 	private JScrollPane ScrollPanel;
 	private JTextArea TextArea;
@@ -20,21 +20,24 @@ public class OrderView extends JPanel{
 	private JButton Button3;
 	private JButton Button4;
 	
-	//JList에 스트링으로 추가하기 위한 변수
-	private String[] DrinkName = {"Drink"};
-	private String[] CoffeeName = {"Coffee"};
+	//delegate
+	private panelDelegate delegate;
+	
+	public void setDelegate(panelDelegate delegate){
+		this.delegate = delegate;
+	}
 	
 	public OrderView(MainFrame win){
 		this.win = win;
 		setLayout(null);
 		
 		/*1번 메뉴*/
-		Button1 = new JButton("Coffee");
-		Button1.setSize(200,150);
-		Button1.setLocation(10, 10);
-		add(Button1);
+		button1 = new JButton("Coffee");
+		button1.setSize(200,150);
+		button1.setLocation(10, 10);
+		add(button1);
 		
-		Button1.addActionListener(new CoffeeActionListener());
+		button1.addActionListener(new DrinkActionListener());
 		
 		
 		/*2번메뉴*/
@@ -65,38 +68,36 @@ public class OrderView extends JPanel{
 		Button4.setLocation(870, 700);
 		add(Button4);
 		
-		
-		
+	}
+	
+	public void changeView(String str){
+		delegate.changeView(str);
 	}
 	
 	// JButton Actionlistener 생성 및 버튼 이벤트 생성시 JList에 String추가
-	class DrinkActionListener implements ActionListener{
+	class DrinkActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e){
-			MainFrame mainframe = new MainFrame();
-			JButton b = (JButton) e.getSource();
 			
-			if(b.getText().equals("Drink")){
-				OrderList.setListData(DrinkName);	
-			} else
-				b.setText("Drink");
-			mainframe.change("Drink");
+			JButton b = (JButton) e.getSource();
+			changeView(b.getText());
 		}
 	}
-	
+	/*
 	//JButton Actionlistener 생성 및 버튼 이벤트 생성시 JList에 String추가
 	class CoffeeActionListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
-			MainFrame mainframe = new MainFrame();
+			//change ca = new change();
 			JButton b = (JButton) e.getSource();
 			
 			//배열로 메뉴값을 넣을수 있다면 if else순서를 change뒤로 넘겨 detail한 메뉴를 JList에 추가할수 있다.
 			if(b.getText().equals("Coffee")){
 				OrderList.setListData(CoffeeName);
-			} else
+			} else {
 				b.setText("Coffee");
-			mainframe.change("Coffee");
+			}
+			//ca.change(coffee);
 		}
-	}
+	}*/
 	
 	
 	
